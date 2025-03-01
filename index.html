@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Recommender</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stack Recommender</h1>
+        <p class="intro">Answer a few questions to get personalized tech stack recommendations for your project.</p>
+        
+        <div class="form-container">
+            <!-- Step 1: Project Type -->
+            <div class="step" id="step1">
+                <h2>What type of project are you building?</h2>
+                <div class="options">
+                    <button class="option-btn" data-value="website">Website</button>
+                    <button class="option-btn" data-value="webapp">Web Application</button>
+                    <button class="option-btn" data-value="mobile">Mobile App</button>
+                    <button class="option-btn" data-value="desktop">Desktop App</button>
+                </div>
+            </div>
+            
+            <!-- Step 2: Complexity -->
+            <div class="step hidden" id="step2">
+                <h2>How complex will your project be?</h2>
+                <div class="options">
+                    <button class="option-btn" data-value="simple">Simple (few pages/features)</button>
+                    <button class="option-btn" data-value="medium">Medium (multiple features)</button>
+                    <button class="option-btn" data-value="complex">Complex (many features)</button>
+                </div>
+            </div>
+            
+            <!-- Step 3: User Data -->
+            <div class="step hidden" id="step3">
+                <h2>Will users need to log in or store data?</h2>
+                <div class="options">
+                    <button class="option-btn" data-value="yes">Yes</button>
+                    <button class="option-btn" data-value="no">No</button>
+                </div>
+            </div>
+            
+            <!-- Step 4: Performance Needs -->
+            <div class="step hidden" id="step4">
+                <h2>Will your application need real-time updates?</h2>
+                <div class="options">
+                    <button class="option-btn" data-value="yes">Yes (chat, live updates)</button>
+                    <button class="option-btn" data-value="no">No</button>
+                </div>
+            </div>
+            
+            <!-- Step 5: Development Experience -->
+            <div class="step hidden" id="step5">
+                <h2>What's your coding experience level?</h2>
+                <div class="options">
+                    <button class="option-btn" data-value="beginner">Complete Beginner</button>
+                    <button class="option-btn" data-value="some">Some Experience</button>
+                    <button class="option-btn" data-value="experienced">Experienced</button>
+                </div>
+            </div>
+            
+            <!-- Results -->
+            <div class="step hidden" id="results">
+                <h2>Your Recommended Stack</h2>
+                <div class="results-container">
+                    <div class="stack-section">
+                        <h3>Frontend</h3>
+                        <div id="frontend-result"></div>
+                    </div>
+                    <div class="stack-section">
+                        <h3>Backend</h3>
+                        <div id="backend-result"></div>
+                    </div>
+                    <div class="stack-section">
+                        <h3>Database</h3>
+                        <div id="database-result"></div>
+                    </div>
+                </div>
+                <button id="start-over" class="action-btn">Start Over</button>
+            </div>
+            
+            <div class="navigation">
+                <button id="prev-btn" class="nav-btn hidden">Previous</button>
+                <div class="progress-indicator">
+                    <span class="current-step">1</span>/<span class="total-steps">5</span>
+                </div>
+                <button id="next-btn" class="nav-btn hidden">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
